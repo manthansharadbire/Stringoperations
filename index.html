@@ -4,51 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>String / Text Operations</title>
-<style>
-body{
-    background-color: rgb(47, 41, 41);
-    margin: 0;
-    padding: 0;
-}
-
-.heading{
-    color: white;
-    text-align: center;
-}
-
-.textbox{
-    width: 70%;
-    display: block;
-    margin: auto;
-    margin-top: 10px;
-    padding: 20px;
-    min-height: 150px;
-}
-
-.btn-container{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 40px;
-    margin: 20px auto;
-}
-
-.btn{
-    width: 150px;
-    padding: 10px 10px;
-    font-size: 16px;
-    border-radius: 20px;
-    border: none;
-    background-color: grey;
-    color: white;
-    cursor: pointer;
-    
-}
-
-.btn:hover{
-    background-color: rgb(100, 90, 90);
-}
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <h1 class="heading">String Operations</h1>
@@ -60,28 +16,6 @@ body{
 <button type="button" class="btn" onclick="handlewordcount()">Word Count</button>
 <button type="button" class="btn" onclick="handlecharactercount()">Character Count</button>
 </div>
-
-<script>
-    const inputElement = document.getElementById('input');
-    const outputElement = document.getElementById('output');
-
-    function handleuppercase(){
-        outputElement.value = inputElement.value.toUpperCase();
-    }
-
-    function handlelowercase(){
-        outputElement.value = inputElement.value.toLowerCase();
-    }
-
-    function handlewordcount(){
-        outputElement.value = inputElement.value.split(" ").length;
-        
-    }
-
-    function handlecharactercount(){
-        outputElement.value = inputElement.value.length;
-    }
-
-</script>
+<script src="script.js"></script>
 </body>
 </html>
