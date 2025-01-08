@@ -28,7 +28,8 @@ body{
 .btn-container{
     display: flex;
     justify-content: space-around;
-    width: 70%;
+    flex-wrap: wrap;
+    margin-top: 40px;
     margin: 20px auto;
 }
 
@@ -52,7 +53,7 @@ body{
 <body>
 <h1 class="heading">String Operations</h1>
 <input type="text" class="textbox" placeholder="Enter a text to perform Operations" id="input">
-<input type="text" class="textbox" placeholder="Enter a text to perform Operations" id="output">
+<input type="text" class="textbox" placeholder="Your output here" id="output">
 <div class="btn-container">
 <button type="button" class="btn" onclick="handleuppercase()">Upper Case</button>
 <button type="button" class="btn" onclick="handlelowercase()">Lower Case</button>
@@ -61,10 +62,26 @@ body{
 </div>
 
 <script>
-    function handleuppercase(){}
-    function handlelowercase(){}
-    function handlewordcount(){}
-    function handlecharactercount(){}
+    const inputElement = document.getElementById('input');
+    const outputElement = document.getElementById('output');
+
+    function handleuppercase(){
+        outputElement.value = inputElement.value.toUpperCase();
+    }
+
+    function handlelowercase(){
+        outputElement.value = inputElement.value.toLowerCase();
+    }
+
+    function handlewordcount(){
+        outputElement.value = inputElement.value.split(" ").length;
+        
+    }
+
+    function handlecharactercount(){
+        outputElement.value = inputElement.value.length;
+    }
+
 </script>
 </body>
 </html>
